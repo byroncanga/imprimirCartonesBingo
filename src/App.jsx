@@ -98,7 +98,7 @@ function App() {
                   </h1>
                   {boleto.b.map((number) => {
                     return (
-                      <p className="text-2xl font-bold text-black mb-2 border w-full py-4 text-center">
+                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
                         {number}
                       </p>
                     );
@@ -110,7 +110,7 @@ function App() {
                   </h1>
                   {boleto.i.map((number) => {
                     return (
-                      <p className="text-2xl font-bold text-black mb-2 border w-full py-4 text-center">
+                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
                         {number}
                       </p>
                     );
@@ -122,7 +122,7 @@ function App() {
                   </h1>
                   {boleto.n.map((number) => {
                     return (
-                      <p className="text-2xl font-bold text-black mb-2 border w-full py-4 text-center">
+                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
                         {number}
                       </p>
                     );
@@ -134,7 +134,7 @@ function App() {
                   </h1>
                   {boleto.g.map((number) => {
                     return (
-                      <p className="text-2xl font-bold text-black mb-2 border w-full py-4 text-center">
+                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
                         {number}
                       </p>
                     );
@@ -146,7 +146,7 @@ function App() {
                   </h1>
                   {boleto.o.map((number) => {
                     return (
-                      <p className="text-2xl font-bold text-black mb-2 border w-full py-4 text-center">
+                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
                         {number}
                       </p>
                     );
