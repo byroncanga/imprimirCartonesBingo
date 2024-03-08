@@ -88,9 +88,6 @@ function App() {
         {bingo.map((boleto) => {
           return (
             <div className=" w-100 h-96">
-              <h1 className="text-2xl font-bold text-black mt-10 text-center mb-2 ml-2">
-                Boleto # {boleto.boleto}
-              </h1>
               <div className="grid grid-cols-5 gap-x-2">
                 <div className="flex flex-col items-center ">
                   <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
