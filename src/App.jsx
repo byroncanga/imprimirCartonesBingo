@@ -87,7 +87,7 @@ function App() {
         <button onClick={handlePrint}>Imprimir</button>
         {bingo.map((boleto) => {
           return (
-            <div className="">
+            <div className=" w-100 h-96">
               <h1 className="text-2xl font-bold text-black mt-10 text-center mb-2 ml-2">
                 Boleto # {boleto.boleto}
               </h1>

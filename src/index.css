@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  .w-100.h-96 {
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: avoid;
+    width: 100%;
+    max-width: 72mm; /* Ajusta al ancho de tu impresora POS */
+  }
+  /* Asegúrate de que todos los elementos dentro del contenedor se ajusten correctamente */
+  div,
+  p,
+  h1 {
+    break-inside: avoid;
+  }
+}
