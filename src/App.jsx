@@ -89,7 +89,9 @@ function App() {
   return (
     <>
       <div>
-        <button onClick={handlePrint}>Imprimir</button>
+        <button className="bg-blue-500 px-4 mt-4 ml-4" onClick={handlePrint}>
+          Imprimir
+        </button>
         <div id="printable-area">
           {" "}
           {/* Asegúrate de añadir este ID */}
