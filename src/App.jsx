@@ -1,4 +1,5 @@
 import React from "react";
+import printJS from "print-js";
 import "./index.css";
 
 const bingo = [
@@ -78,84 +79,92 @@ const bingo = [
 
 function App() {
   const handlePrint = () => {
-    window.print();
+    printJS({
+      printable: "printable-area",
+      type: "html",
+      targetStyles: ["*"],
+    });
   };
 
   return (
     <>
-      <div className="">
+      <div>
         <button onClick={handlePrint}>Imprimir</button>
-        {bingo.map((boleto) => {
-          return (
-            <div className="boleto print:break-inside-avoid print:max-w-full">
-              <h1 className="text-2xl font-bold text-black mt-10 text-center mb-2 ml-2">
-                Boleto # {boleto.boleto}
-              </h1>
-              <div className="grid grid-cols-5 gap-x-2">
-                <div className="flex flex-col items-center ">
-                  <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
-                    B
-                  </h1>
-                  {boleto.b.map((number) => {
-                    return (
-                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
-                        {number}
-                      </p>
-                    );
-                  })}
-                </div>
-                <div className="flex flex-col items-center">
-                  <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
-                    I
-                  </h1>
-                  {boleto.i.map((number) => {
-                    return (
-                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
-                        {number}
-                      </p>
-                    );
-                  })}
-                </div>
-                <div className="flex flex-col items-center ">
-                  <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
-                    N
-                  </h1>
-                  {boleto.n.map((number) => {
-                    return (
-                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
-                        {number}
-                      </p>
-                    );
-                  })}
-                </div>
-                <div className="flex flex-col items-center">
-                  <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
-                    G
-                  </h1>
-                  {boleto.g.map((number) => {
-                    return (
-                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
-                        {number}
-                      </p>
-                    );
-                  })}
-                </div>
-                <div className="flex flex-col items-center ">
-                  <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
-                    O
-                  </h1>
-                  {boleto.o.map((number) => {
-                    return (
-                      <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
-                        {number}
-                      </p>
-                    );
-                  })}
+        <div id="printable-area">
+          {" "}
+          {/* Asegúrate de añadir este ID */}
+          {bingo.map((boleto) => {
+            return (
+              <div className="">
+                <h1 className="text-2xl font-bold text-black mt-10 text-center mb-2 ml-2">
+                  Boleto # {boleto.boleto}
+                </h1>
+                <div className="grid grid-cols-5 gap-x-2">
+                  <div className="flex flex-col items-center ">
+                    <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
+                      B
+                    </h1>
+                    {boleto.b.map((number) => {
+                      return (
+                        <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
+                          {number}
+                        </p>
+                      );
+                    })}
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
+                      I
+                    </h1>
+                    {boleto.i.map((number) => {
+                      return (
+                        <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
+                          {number}
+                        </p>
+                      );
+                    })}
+                  </div>
+                  <div className="flex flex-col items-center ">
+                    <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
+                      N
+                    </h1>
+                    {boleto.n.map((number) => {
+                      return (
+                        <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
+                          {number}
+                        </p>
+                      );
+                    })}
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
+                      G
+                    </h1>
+                    {boleto.g.map((number) => {
+                      return (
+                        <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
+                          {number}
+                        </p>
+                      );
+                    })}
+                  </div>
+                  <div className="flex flex-col items-center ">
+                    <h1 className="text-2xl font-bold text-white bg-slate-700 w-full text-center">
+                      O
+                    </h1>
+                    {boleto.o.map((number) => {
+                      return (
+                        <p className="text-2xl font-bold text-black mb-2 border-2 border-slate-950 p-2 w-full  text-center">
+                          {number}
+                        </p>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </>
   );
