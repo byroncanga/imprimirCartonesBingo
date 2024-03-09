@@ -95,9 +95,9 @@ function App() {
         <div id="printable-area">
           {" "}
           {/* Asegúrate de añadir este ID */}
-          {bingo.map((boleto) => {
+          {bingo.map((boleto, index) => {
             return (
-              <div className="">
+              <div className={index !== 0 ? "page-break" : ""}>
                 <h1 className="text-2xl font-bold text-black mt-10 text-center mb-2 ml-2">
                   Boleto # {boleto.boleto}
                 </h1>
