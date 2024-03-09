@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* index.css */
 @media print {
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    height: auto; /* Evita forzar un tamaño de página específico */
+  .boleto {
+    width: 72mm; /* Aproximadamente el ancho de papel de 80mm, ajusta según necesidad */
+    page-break-before: always; /* Asegura que cada boleto comience en una nueva página */
+    page-break-after: always; /* Evita que se corte el contenido */
+    page-break-inside: avoid; /* Evita cortes dentro del boleto */
   }
-  .print\:break-inside-avoid {
-    break-inside: avoid-page; /* Asegúrate de que este estilo se aplica solo donde sea necesario */
+
+  .text-2xl {
+    font-size: 12px; /* Ajusta el tamaño de la fuente para que el contenido se ajuste mejor */
   }
-  .print\:break-after-auto {
-    break-after: auto; /* Permite un flujo natural sin forzar saltos de página */
-  }
-  /* Elimina los estilos que puedan estar causando saltos de página innecesarios */
+
+  /* Ajustes adicionales para garantizar que el contenido se ajuste dentro de los límites de la impresora */
 }
